@@ -1,6 +1,6 @@
 plugins {
-    id("java")
-    id("maven-publish")
+    java
+    `maven-publish`
 }
 
 group = "me.nettee"
@@ -23,7 +23,6 @@ tasks.test {
 // [2] Add task script to publish
 publishing {
     publications {
-        //
         create<MavenPublication>("cors-lib") {
             from(components["java"])
             groupId = "com.github.merge-simpson"
@@ -47,6 +46,6 @@ tasks.publishToMavenLocal.configure {
 tasks.jar {
     enabled = true
     archiveClassifier.set("") // remove suffix "-plain"
-    // 다운로드 하려는 파일 이름: example-error-code-api-0.1.0.jar
-    // 위 명령 누락 때 파일 이름: example-error-code-api-0.1.0-plain.jar
+    // 다운로드 하려는 파일 이름: demo-cors-lib-25-04-0.1.0-rc3.jar
+    // 위 명령 누락 때 파일 이름: demo-cors-lib-25-04-0.1.0-rc3-plain.jar
 }
