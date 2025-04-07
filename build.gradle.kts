@@ -11,11 +11,9 @@ repositories {
 }
 
 dependencies {
-    // Choose: api("org.springframework:spring-webmvc") vs compileOnly("org.springframework:spring-webmvc")
-    compileOnly("org.springframework:spring-webmvc:6.2.2")
-    compileOnly("org.springframework.boot:spring-boot-autoconfigure:3.4.3")
-
-    implementation("org.springframework.boot:spring-boot-starter-web:3.4.3")
+    compileOnly("org.springframework:spring-webmvc:6.2.5")
+    compileOnly("org.springframework.boot:spring-boot-autoconfigure:3.4.4")
+    testImplementation("org.springframework.boot:spring-boot-starter-web:3.4.4")
 }
 
 tasks.test {
